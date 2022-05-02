@@ -1,0 +1,37 @@
+ja:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "バリエーションに失敗しました: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "%{record}が存在しているので削除できません"
+          has_many: "%{record}が存在しているので削除できません"
+        required: を入力してください
+        blank: を入力してください
+        too_long: は%{count}文字以内で入力してください
+        too_short: は%{count}文字以上で入力してください
+        taken: はすでに存在します
+      models:
+        profile:
+          attributes:
+            profile:
+              too_short: を入力してください
+    models:
+      employee: 社員
+      department: 部署
+      office: オフィス
+      profile: プロフィール
+    attributes:
+      employee:
+        number: 社員番号
+        last_name: 氏名（姓）
+        first_name: 氏名（名）
+        account: アカウント
+        password: パスワード
+        e_mail: メールアドレス
+        date_of_joining: 入社年月日
+        department_id: 部署
+        office_id: オフィス
+        employee_info_manage_auth: 社員情報管理権限
+      profile:
+        profile: プロフィール
