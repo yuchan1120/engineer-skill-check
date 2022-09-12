@@ -1,0 +1,32 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'app/channels/**/*'
+    - 'app/controllers/application_controller.rb'
+    - 'app/controllers/dashboard_controller.rb'
+    - 'app/controllers/employees_controller.rb'
+    - 'app/controllers/profiles_controller.rb'
+    - 'app/controllers/sessions_controller.rb'
+    - 'app/helpers/**/*'
+    - 'app/jobs/**/*'
+    - 'app/mailers/**/*'
+    - 'app/models/application_record.rb'
+    - 'app/models/department.rb'
+    - 'app/models/employee.rb'
+    - 'app/models/office.rb'
+    - 'app/models/profile.rb'
+    - 'bin/**/*'
+    - 'config.ru'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'lib/**/*'
+    - 'log/**/*'
+    - 'node_modules/**/*'
+    - 'public/**/*'
+    - 'storage/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
