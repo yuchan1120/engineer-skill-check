@@ -30,3 +30,6 @@ AllCops:
     - 'storage/**/*'
     - 'tmp/**/*'
     - 'vendor/**/*'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
