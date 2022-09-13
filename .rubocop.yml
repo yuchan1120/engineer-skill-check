@@ -31,5 +31,15 @@ AllCops:
     - 'tmp/**/*'
     - 'vendor/**/*'
 
+Layout/LineLength:
+  Max: 125
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/MethodLength:
+  Max: 15
+
 Style/FrozenStringLiteralComment:
   Enabled: false
