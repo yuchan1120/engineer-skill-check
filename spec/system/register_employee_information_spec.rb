@@ -20,6 +20,26 @@ RSpec.describe '社員情報登録', type: :system do
       find('#submit_save').click
     end
 
+    scenario "・社員番号：入力されているか？：'社員番号が入力されていません'" do
+      expect(page).to have_selector '.employee_form ul li', text: '社員番号が入力されていません'
+    end
+
+    scenario "・氏名（姓）：入力されているか？：'氏名（姓）が入力されていません'" do
+      expect(page).to have_selector '.employee_form ul li', text: '氏名（姓）が入力されていません'
+    end
+
+    scenario "・氏名（名）：入力されているか？：'氏名（名）が入力されていません'" do
+      expect(page).to have_selector '.employee_form ul li', text: '氏名（名）が入力されていません'
+    end
+
+    scenario "・アカウント：入力されているか？：'アカウントが入力されていません'" do
+      expect(page).to have_selector '.employee_form ul li', text: 'アカウントが入力されていません'
+    end
+
+    scenario "・パスワード：入力されているか？：'パスワードが入力されていません'" do
+      expect(page).to have_selector '.employee_form ul li', text: 'パスワードが入力されていません'
+    end
+
     scenario "・メールアドレス：入力されているか？：'メールアドレスが入力されていません'" do
       expect(page).to have_selector '.employee_form ul li', text: 'メールアドレスが入力されていません'
     end
