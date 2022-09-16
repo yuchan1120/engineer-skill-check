@@ -1,3 +1,40 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.post_index {
+  .new_post {
+    text-align: right;
+    margin-right: 31px;
+  }
+
+  .btn {
+    border: 1px solid;
+    padding: 3px 5px;
+  }
+
+  .post_table {
+    height: fit-content;
+    width: 700px;
+    table-layout: fixed;
+    margin-top: 20px;
+
+    thead {
+      line-height: 50px;
+    }
+
+    .post {
+      line-height: 30px;
+
+      .btn_th {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.title {
+  text-align: left;
+  width: 350px;
+  padding-left: 25px;
+}
+
+.created_at {
+  width: 200px;
+}
