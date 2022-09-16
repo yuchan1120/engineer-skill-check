@@ -1,0 +1,11 @@
+.post_space
+  p.employee_index
+    = link_to '一覧に戻る', posts_path, class: 'btn', id: 'link_posts_btn'
+  .row
+    span.label
+      | タイトル
+    span#title
+      = @post.title
+  .row
+    span.content_value#content
+      = safe_join(@post.content.split("\n"),tag(:br))
