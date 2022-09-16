@@ -16,3 +16,4 @@ Employee.find_or_create_by(id: 1, department_id: Department.find_by(name: '総�
                            number: '1', last_name: '山田', first_name: '太郎', account: 'yamada',
                            password: 'hogehoge', email: 'yamada@example.co.jp', date_of_joining: '1991/4/1',
                            employee_info_manage_auth: true)
+Post.find_or_create_by(id: 1, employee_id: 1, title: '総務部からのお知らせ', content: '総務部からのお知らせです。')

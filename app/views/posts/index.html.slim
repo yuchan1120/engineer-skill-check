@@ -1,0 +1,26 @@
+.post_index
+  - if flash.notice.present?
+    p
+      = flash.notice
+  - if current_user.news_posting_auth
+    p.new_post
+      = link_to '新規追加', new_post_path, class: 'btn', id: 'link_new_post'
+  table.post_table
+    thead
+      tr
+        th.title
+          | タイトル
+        th.created_at#sort_created_at
+          = sort_order "created_at", "公開日"
+    tbody
+      - @posts.each_with_index do |post, i|
+        tr.post
+          th.title id="post-#{i}th-title"
+            = link_to post.title, post_path(post)
+          th.created_at
+            = post.created_at.to_s(:datetime_jp)
+          - if post.employee == current_user
+            th.btn_th
+              = link_to '編集', edit_post_path(post), class: 'btn', id: "link_edit_post_#{i}th"
+            th.btn_th
+              = link_to '削除', post, method: :delete, data: { confirm: "お知らせ「#{post.title}」を削除します。よろしいですか？" }, class: 'btn', id: "link_delete_post_#{i}th"
