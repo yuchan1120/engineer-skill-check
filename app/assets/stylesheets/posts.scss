@@ -38,3 +38,64 @@
 .created_at {
   width: 200px;
 }
+
+.post_space {
+  width: 50%;
+  position: relative;
+  margin-top: 30px;
+
+  .employee_index {
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  .btn {
+    border: 1px solid;
+    padding: 3px 5px;
+  }
+
+  .label {
+    display: inline-block;
+    width: 80px;
+    vertical-align: top;
+  }
+
+  .row {
+    line-height: 2.4em;
+
+    .content_value {
+      width: 480px;
+      display: inline-block;
+      line-height: 1.5em;
+      padding-top: 45px;
+    }
+  }
+
+  .form_group {
+    display: flex;
+    margin-top: 10px;
+
+    input {
+      width: 534px;
+      display: inline-block;
+      line-height: 1.5em;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 400px;
+    padding: 7px;
+    display: inline-block;
+    line-height: 1.5em;
+  }
+
+  input[type="submit"]{
+    position: absolute;
+    top: -19px;
+    right: 0px;
+    padding: 0px 22px;
+    background-color: white;
+    border: 1px solid;
+  }
+}
