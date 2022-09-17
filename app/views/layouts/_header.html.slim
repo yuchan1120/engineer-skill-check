@@ -4,7 +4,7 @@
     li
       = link_to 'お知らせ', posts_path, id: 'link_posts_header'
     li
-      = link_to '社員紹介', employees_path
+      = link_to '社員紹介', employees_path, id: 'link_employees_header'
   ul.right_menu
     li
       button#dropdown__btn.dropdown__btn
@@ -14,4 +14,4 @@
     .dropdown_items
       ul
         li
-          = link_to 'ログアウト', logout_path, method: :delete
+          = link_to 'ログアウト', logout_path, method: :delete, id: 'link_logout'
