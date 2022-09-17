@@ -1,4 +1,9 @@
-module RegisterSupport
+module EmployeeSupport
+  def create_employee_and_sign_in_as_employee
+    @employee = create(:employee, department: @department, office: @office)
+    sign_in_as @employee
+  end
+
   def register_employee_information
     fill_in 'employee[number]', with: '2'
     fill_in 'employee[last_name]', with: '太郎'
@@ -18,5 +23,5 @@ module RegisterSupport
 end
 
 RSpec.configure do |config|
-  config.include RegisterSupport
+  config.include EmployeeSupport
 end

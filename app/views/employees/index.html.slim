@@ -4,35 +4,35 @@
       = flash.notice
   - if current_user.employee_info_manage_auth
     p.new_employee
-      = link_to '新規追加', new_employee_path, class: 'btn'
+      = link_to '新規追加', new_employee_path, class: 'btn', id: 'link_new_employee'
   table.employee_table
     thead
       tr
-        th
+        th#sort_number
           = sort_order "number", "社員番号"
         th.name
           | 氏名
-        th.department_th
+        th.department_th#sort_department_id
           = sort_order "department_id", "所属"
     tbody
-      - @employees.each do |employee|
+      - @employees.each_with_index do |employee, i|
         tr.employee
           - if employee.profiles.active.present?
             - if employee == current_user
-              th
+              th id="employee-#{i}th-number"
                 = link_to employee.number, edit_employee_profile_path(employee, employee.profiles.active.first)
             - else
-              th
+              th id="employee-#{i}th-number"
                 = link_to employee.number, employee_profile_path(employee, employee.profiles.active.first)
           - else
-            th
+            th id="employee-#{i}th-number"
               = link_to employee.number, employee_profiles_path(employee)
-          th.name
+          th.name id="employee-#{i}th-name"
             = "#{employee.last_name} #{employee.first_name}"
-          th
+          th id="employee-#{i}th-department"
             = employee.department.name
           - if current_user.employee_info_manage_auth
             th.btn_th
-              = link_to '編集', edit_employee_path(employee), class: 'btn'
+              = link_to '編集', edit_employee_path(employee), class: 'btn', id: "link_edit_employee_#{i}th"
             th.btn_th
-              = link_to '削除', employee, method: :delete, data: { confirm: "社員「#{employee.first_name} #{employee.last_name}」を削除します。よろしいですか？" }, class: 'btn'
+              = link_to '削除', employee, method: :delete, data: { confirm: "社員「#{employee.first_name} #{employee.last_name}」を削除します。よろしいですか？" }, class: 'btn', id: "link_delete_employee_#{i}th"
