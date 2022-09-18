@@ -1,15 +1,15 @@
 .row
   span.label
     | 社員番号
-  span
+  span#number
     = employee.number
 .row
   span.label
     | 氏名
-  span
+  span#name
     = "#{employee.last_name} #{employee.first_name}"
 .row
   span.label
     | 部署
-  span
+  span#department
     = employee.department.name
